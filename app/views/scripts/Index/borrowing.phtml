@@ -1,0 +1,38 @@
+<div id="queryBorrowing" style="padding:10px;">
+    <h1>器材借用查詢</h1>
+    <div class="col-md-12" style="margin-top:10px;">
+        <form style="font-weight:bold;">
+            <div class="col-md-12">
+                <label for="keywordqueryMode">
+                    <input type="radio" name="queryMode" id="keywordqueryMode" checked="checked" value="content">關鍵字
+                <label>
+                <input type="text" id="queryKeywordinput" v-on:click="">(器材名稱或借用者，空白是搜尋全部)
+            </div>
+            <div class="col-md-12">
+                 <label for="datequeryMode">
+                    <input type="radio" name="queryMode" id="datequeryMode" value="content"> 借用日期介於
+                 </label>
+                <input type="text" id="startDateinput">至<input type="text" id="endDateinput">
+                 
+            </div>
+            <button type="button" name="submitQuery" news-id="" news-key="" class="btn btn-primary course-search">搜尋</button>
+        </form>
+        
+    </div>
+    <div>
+        <table class="table" id="queryBorrowingTable">
+            <thead>
+                <tr>
+                    <th>器材名稱</th>
+                    <th>借用者</th>
+                    <th>借用日期</th>
+                    <th>歸還日期</th>
+                </tr>
+            </thead>
+            <tbody>
+            </tbody>
+        </table>
+    </div>
+</div>
+
+<script src="assets/js/borrowing.js"></script>

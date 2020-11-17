@@ -1,0 +1,39 @@
+<?php
+//從Controller中取得所需要的資料。
+$reportData = $this->_data['reportData'];
+
+//測試資料
+//var_dump($reportData);
+
+?>
+
+<div id="borrowingReport1">
+    <h1>器材借用統計報表</h1>
+    <div>
+        <table class="table" id="borrowingReport1Table">
+            <thead>
+                <tr>
+                    <th>器材名稱</th>
+                    <th>庫存數</th>
+                    <th>毀損數量</th>
+                    <th>借用數量</th>
+                </tr>
+            </thead>
+            <tbody>
+            <?php 
+                //產生器材借用統計資料
+                if(!Empty($reportData)){
+                    foreach($reportData as $value){
+                       echo '<tr>';
+                       echo '   <td>'.$value['device_name'].'</td>';
+                       echo '   <td>'.$value['total_num'].'</td>';
+                       echo '   <td>'.$value['damage_num'].'</td>';
+                       echo '   <td>'.$value['borrowing_num'].'</td>';
+                       echo '</tr>';
+                    }
+                }
+            ?>
+            </tbody>
+        </table>
+    </div>
+</div>

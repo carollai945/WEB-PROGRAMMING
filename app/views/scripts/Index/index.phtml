@@ -1,0 +1,24 @@
+<div id="allBorrowingList" style="padding:10px;">
+    <h1>所有器材借用列表</h1>
+    <table class="table" id="borrowingTable">
+        <thead>
+            <tr>
+                <th>器材名稱</th>
+                <th>借用者</th>
+                <th>借用日期</th>
+                <th>歸還日期</th>                
+            </tr>
+        </thead>
+        <tbody>
+            <tr v-for="borrowing in borrowingList">
+                <td>{{ borrowing.device_name }}</td>
+                <td>{{ borrowing.borrower_name }}</td>
+                <td>{{ borrowing.borrowing_date }}</td>
+                <td>{{ borrowing.return_date }}</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+
+<script src="assets/js/index.js"></script>
