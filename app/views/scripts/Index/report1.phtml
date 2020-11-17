@@ -1,12 +1,3 @@
-<?php
-//從Controller中取得所需要的資料。
-$reportData = $this->_data['reportData'];
-
-//測試資料
-//var_dump($reportData);
-
-?>
-
 <div id="borrowingReport1">
     <h1>器材借用統計報表</h1>
     <div>
@@ -20,19 +11,6 @@ $reportData = $this->_data['reportData'];
                 </tr>
             </thead>
             <tbody>
-            <?php 
-                //產生器材借用統計資料
-                if(!Empty($reportData)){
-                    foreach($reportData as $value){
-                       echo '<tr>';
-                       echo '   <td>'.$value['device_name'].'</td>';
-                       echo '   <td>'.$value['total_num'].'</td>';
-                       echo '   <td>'.$value['damage_num'].'</td>';
-                       echo '   <td>'.$value['borrowing_num'].'</td>';
-                       echo '</tr>';
-                    }
-                }
-            ?>
             </tbody>
         </table>
     </div>

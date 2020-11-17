@@ -25,6 +25,29 @@
       <script src="javascripts/html5shiv.min.js"></script>
       <script src="javascripts/respond.min.js"></script>
     <![endif]-->
+</head>
+<body>
+    <section>
+        <!-- Static navbar -->
+        <nav class="navbar navbar-default narbar-layout">
+            <div class="container-fluid">
+                <div class="navbar-header">
+                    <a class="navbar-brand" href="index">應用軟體設計競賽--器材借用</a>
+                </div>
+                <div id="navbar" class="navbar-collapse collapse">
+                    <ul class="nav navbar-nav">
+                        <li><a href="/borrowing">所有器材借用列表</a></li>
+                        <li><a href="/queryborrowing">器材借用查詢</a></li>
+                        <li><a href="/report1">器材借用統計報表</a></li>
+                    </ul>
+                </div><!--/.nav-collapse -->
+            </div><!--/.container-fluid -->
+        </nav>
+        <!-- content -->
+        <?php echo $this->content(); ?>
+    </section>
+    
+    <!-- Scripts -->
     
     <!-- Scripts -->
     <script src="assets/js/vonder/jquery.js"></script>
@@ -56,29 +79,7 @@
     <!--script src="assets/js/vonder/jquery.validity.min.js"></script-->
     <!--script src="assets/js/vonder/vue.min.js"></script-->
     <script src="assets/js/vonder/vue.js"></script>
-</head>
-<body>
-    <section>
-        <!-- Static navbar -->
-        <nav class="navbar navbar-default narbar-layout">
-            <div class="container-fluid">
-                <div class="navbar-header">
-                    <a class="navbar-brand" href="index">應用軟體設計競賽--器材借用</a>
-                </div>
-                <div id="navbar" class="navbar-collapse collapse">
-                    <ul class="nav navbar-nav">
-                        <li><a href="/borrowing">所有器材借用列表</a></li>
-                        <li><a href="/queryborrowing">器材借用查詢</a></li>
-                        <li><a href="/report1">器材借用統計報表</a></li>
-                    </ul>
-                </div><!--/.nav-collapse -->
-            </div><!--/.container-fluid -->
-        </nav>
-        <!-- content -->
-        <?php echo $this->content(); ?>
-    </section>
-     
-
+    <script src="assets/js/index.js"></script>
     
 </body>
 </html>
